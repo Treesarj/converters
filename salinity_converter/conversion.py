@@ -1,6 +1,6 @@
 # salinity_converter/conversion.py
 
-def knudsen_to_practical(v):
+def knudsen_to_practical(s_knudsen):
     """
     Convert Knudsen salinity to Practical salinity.
     
@@ -10,7 +10,7 @@ def knudsen_to_practical(v):
     Returns:
     float: Practical salinity
     """
-    return (v - 0.03) * (1.80655 / 1.805)
+    return (s_knudsen - 0.03) * (1.80655 / 1.805)
 
 def cox_to_practical(s_cox):
     """
@@ -24,7 +24,7 @@ def cox_to_practical(s_cox):
     """
     return s_cox  # Assuming Cox salinity is directly equivalent to Practical salinity
 
-def practical_to_knudsen(s_practical):
+def practical_to_knudsen(v):
     """
     Convert Practical salinity to Knudsen salinity.
     
@@ -34,7 +34,7 @@ def practical_to_knudsen(s_practical):
     Returns:
     float: Knudsen salinity (parts per thousand)
     """
-    return (s_practical * (1.805 / 1.80655)) + 0.03
+    return (v * (1.805 / 1.80655)) + 0.03
 r
 def practical_to_cox(s_practical):
     """
