@@ -6,6 +6,7 @@ setup(
     version="0.1.0",  # Initial version
     packages=find_packages(),  # Automatically find packages in the directory
     install_requires=[  # Dependencies of your package
+        'numpy',
         # Example: 'requests',
     ],
     author="Your Name",
