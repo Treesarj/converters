@@ -26,11 +26,15 @@ def calc_cell_center_depth(blanking, cell_size, sensor_depth, df_north, df_east,
 
 def calc_cell_center_depth1(blanking, cell_size, sensor_depth, df_north, df_east, df_w):
     for df_ in [df_north, df_east, df_w]:
-        df_.columns = [
-            sensor_depth
-            + blanking
-            + (cell_size / 2)
-            + (c * cell_size)
-            for c in df_.columns
-        ]
+        if isinstance(df_, pd.DataFrame):
+            df_.columns = [
+                sensor_depth
+                + blanking
+                + (cell_size / 2)
+                + (c * cell_size)
+                for c in range(len(df_.columns))
+            ]
+        else:
+            raise TypeError(f"Expected DataFrame, got {type(df_)} instead.")
+    
     return  df_north
