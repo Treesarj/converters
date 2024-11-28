@@ -3,7 +3,10 @@ import pandas as pd
 
 def square_root(v):
     return v * 2
-
+    
+def multiply(x,y):
+    return x*y
+    
 def to_knudsen(v):
     return (v * (1.805 / 1.80655)) + 0.0
 
