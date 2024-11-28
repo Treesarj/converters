@@ -28,3 +28,16 @@ def calc_cell_center_depth(blanking, cell_size, sensor_depth, velocity):
         raise TypeError(f"Expected velocity to be a list or ndarray, got {type(velocity)} instead.")
     
     return velocity
+
+def calc_cell_center_depth1(velocity):
+    blanking = 1
+    cell_size = 0.5
+    sensor_depth = 5
+    velocity = [
+            sensor_depth
+            + blanking
+            + (cell_size / 2)
+            + (c * cell_size)
+            for c in range(len(velocity))
+        ]    
+    return velocity
