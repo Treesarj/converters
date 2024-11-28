@@ -7,6 +7,7 @@ setup(
     packages=find_packages(),  # Automatically find packages in the directory
     install_requires=[  # Dependencies of your package
         'numpy',
+        'pandas',
         # Example: 'requests',
     ],
     author="Your Name",
