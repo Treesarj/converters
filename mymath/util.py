@@ -11,6 +11,7 @@ def average_vector(vector):
     return np.mean(vector)
 
 def calc_cell_center_depth(blanking, cell_size, sensor_depth, velocity):
+    velocity = np.array(velocity)
     velocity = [
         sensor_depth
         + blanking
