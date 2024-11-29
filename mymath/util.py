@@ -13,7 +13,7 @@ def to_knudsen(v):
 def average_vector(vector):
     return np.mean(vector)
 
-def calc_cell_center_depth1111(blanking,cell_size,sensor_depth,velocity):  
+def calc_cell_center_depth(blanking,cell_size,sensor_depth,velocity):  
     for df_ in [velocity]:
         df_.columns = [
             sensor_depth
