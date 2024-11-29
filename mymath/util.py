@@ -23,3 +23,13 @@ def calc_cell_center_depth(blanking,cell_size,sensor_depth,velocity):
             for c in range(len(df_.columns))
         ]   
     return velocity
+
+def cell_center_depth(blanking,cell_size,sensor_depth,velocity):
+    new_column_names = [
+        sensor_depth
+        + blanking
+        + (cell_size / 2)
+        + (c * cell_size)
+        for c in range(len(velocity.columns))
+    ]
+    return new_column_names
