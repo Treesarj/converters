@@ -84,4 +84,18 @@ def calc_cell_center_depth1111(blanking,cell_size,sensor_depth,velocity):
         ]   
     return velocity
 
+def calc_cell_center_depth1111(blanking,cell_size,sensor_depth,velocity):
+    # blanking = blanking
+    # cell_size = cell_size
+    # sensor_depth = sensor_depth
+    # for df_ in [velocity]:
+    #     df_.columns = [
+    #         sensor_depth
+    #         + blanking
+    #         + (cell_size / 2)
+    #         + (c * cell_size)
+    #         for c in range(len(df_.columns))
+    #     ]   
+    return velocity
+
 
