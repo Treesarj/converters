@@ -72,7 +72,10 @@ def calc_cell_center_depth111(blanking,cell_size,sensor_depth,velocity):
 
 def calc_cell_center_depth1111(blanking,cell_size,sensor_depth,velocity):
   
-    print(blanking, cell_size,senor_depth,velocity)
+    print(blanking)
+    print( cell_size)
+    print(sensor_depth)
+    print(velocity)
     for df_ in [velocity]:
         df_.columns = [
             sensor_depth
