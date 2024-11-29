@@ -84,7 +84,7 @@ def calc_cell_center_depth1111(blanking,cell_size,sensor_depth,velocity):
         ]   
     return velocity
 
-def calc_cell_center_depth1111(blanking,cell_size,sensor_depth,velocity):
+def calc_cell_center_depth11111(blanking,cell_size,sensor_depth,velocity):
     # blanking = blanking
     # cell_size = cell_size
     # sensor_depth = sensor_depth
