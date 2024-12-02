@@ -13,6 +13,9 @@ def to_knudsen(v):
 def average_vector(vector):
     return np.mean(vector)
 
+def str_to_float(vector):
+    return  vector.astype(float).tolist()
+
 def calc_cell_center_depth(blanking,cell_size,sensor_depth,velocity):  
     print(blanking)
     print(cell_size)
