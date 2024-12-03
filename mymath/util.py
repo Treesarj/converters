@@ -3,10 +3,10 @@ import pandas as pd
 
 def square_root(v):
     return v * 2
-    
-def multiply(x,y):
-    return x*y
-    
+
+def multiply(x, y):
+    return x * y
+
 def to_knudsen(v):
     """
     Convert a given value to the Knudsen number using a specific conversion factor.
@@ -28,12 +28,11 @@ def str_to_float(vector):
 
     Returns:
     list: A list of floats converted from the input Series.
-    
     """
     return vector.astype(float).tolist()
 
-def calc_cell_center_depth(blanking,cell_size,sensor_depth,velocity):  
-     """
+def calc_cell_center_depth(blanking, cell_size, sensor_depth, velocity):
+    """
     Calculate the center depth of cells in a velocity profile and update the DataFrame column names.
 
     Parameters:
@@ -52,10 +51,10 @@ def calc_cell_center_depth(blanking,cell_size,sensor_depth,velocity):
             + (cell_size / 2)
             + (c * cell_size)
             for c in range(len(df_.columns))
-        ]   
+        ]
     return velocity
 
-def cell_center_depth(blanking,cell_size,sensor_depth,velocity):
+def cell_center_depth(blanking, cell_size, sensor_depth, velocity):
     """
     Calculate the depth of the center of each cell in a velocity profile.
 
