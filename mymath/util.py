@@ -40,3 +40,18 @@ def cell_center_depth(blanking,cell_size,sensor_depth,velocity):
         for c in range(len(velocity.columns))
     ]
     return new_column_names
+
+def create_dataframe(*columns):
+    """
+    This function takes multiple columns as separate parameters and returns a DataFrame by concatenating them.
+
+    Parameters:
+    *columns: Variable length argument list of pandas Series or DataFrame objects
+
+    Returns:
+    pd.DataFrame: A DataFrame created by concatenating the input columns
+    """
+    # Concatenate the columns along axis=1 (columns)
+    df = pd.concat(columns, axis=1)
+
+    return df
