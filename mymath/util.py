@@ -8,13 +8,29 @@ def multiply(x,y):
     return x*y
     
 def to_knudsen(v):
-    return (v * (1.805 / 1.80655)) + 0.0
+    """
+    Convert a given value to the Knudsen number using a specific conversion factor.
 
-def average_vector(vector):
-    return np.mean(vector)
+    Parameters:
+    v (float or pd.Series): The value or pandas Series to be converted.
+
+    Returns:
+    float or pd.Series: The converted value(s) as the Knudsen number.
+    """
+    return (v * (1.805 / 1.80655)) + 0.03
 
 def str_to_float(vector):
-    return  vector.astype(float).tolist()
+    """
+    Convert a pandas Series of strings to a list of floats.
+
+    Parameters:
+    vector (pd.Series): A pandas Series containing string representations of numbers.
+
+    Returns:
+    list: A list of floats converted from the input Series.
+    
+    """
+    return vector.astype(float).tolist()
 
 def calc_cell_center_depth(blanking,cell_size,sensor_depth,velocity):  
     print(blanking)
