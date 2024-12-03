@@ -33,10 +33,18 @@ def str_to_float(vector):
     return vector.astype(float).tolist()
 
 def calc_cell_center_depth(blanking,cell_size,sensor_depth,velocity):  
-    print(blanking)
-    print(cell_size)
-    print(sensor_depth)
-    print(velocity)
+     """
+    Calculate the center depth of cells in a velocity profile and update the DataFrame column names.
+
+    Parameters:
+    blanking (float): The blanking distance from the sensor to the first measurement cell.
+    cell_size (float): The size of each measurement cell.
+    sensor_depth (float): The depth of the sensor.
+    velocity (pd.DataFrame): DataFrame containing velocity measurements.
+
+    Returns:
+    pd.DataFrame: DataFrame with updated column names reflecting the center depths of the cells.
+    """
     for df_ in [velocity]:
         df_.columns = [
             sensor_depth
@@ -48,6 +56,18 @@ def calc_cell_center_depth(blanking,cell_size,sensor_depth,velocity):
     return velocity
 
 def cell_center_depth(blanking,cell_size,sensor_depth,velocity):
+    """
+    Calculate the depth of the center of each cell in a velocity profile.
+
+    Parameters:
+    blanking (float): The blanking distance from the sensor to the first cell.
+    cell_size (float): The size of each cell.
+    sensor_depth (float): The depth of the sensor.
+    velocity (DataFrame): A DataFrame containing velocity data, where each column represents a cell.
+
+    Returns:
+    list: A list of depths for the center of each cell.
+    """
     new_column_names = [
         sensor_depth
         + blanking
